@@ -186,7 +186,7 @@
             <p class="info">Zakat website project using ReactJs+Tailwind+Json API</p>
           </div>
           <div class="p-3 col-md-3"> <img class="img-fluid d-block" src="assets/sisvis.png">
-            <h4 class="mt-3 mb-0 text-dark"> <b>SISVIS - Sistem Informasi Servis</b></h4>
+            <h4 class="mt-3 mb-0 text-dark"> <b><a href="https://esdejecoding.github.io/sisvis/">SISVIS - Sistem Informasi Servis</a></b></h4>
             <p class="info">Repairment Information System Service project using ReactJs+Tailwind+Json API</p>
           </div>
         </div>
@@ -258,6 +258,11 @@
   }
   (()=>{
     document.querySelector('a.btn-download').addEventListener('click',()=>{DownloadPDF()})
+    document.querySelectorAll('#portfolio-project img').forEach((elem)=>{
+      elem.addEventListener('click',(e)=>{
+        window.location.href = e.target.nextElementSibling.children[0].children[0].href
+      })
+    })
     document.querySelector('pingendo').outerHTML = ''
   })()
 </script>
